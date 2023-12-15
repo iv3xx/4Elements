@@ -7,6 +7,419 @@ Licensed under the MIT license - http://opensource.org/licenses/MIT
 Copyright (c) 2015 Daniel Eden
 */
 
+
+
+/* ДЕВОЧКА */
+.block_animation{
+
+  width:150px;
+  height:100%;
+  background-color:  #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items:last baseline;
+  position:relative;
+   padding:150px;
+   margin-right: 0px;
+   padding-right: 0px;
+}
+  
+/*Анимаия при нажатии*/
+ 
+.girl{
+  opacity:0; /*Элемент полностью прозрачный (невидимый)*/
+  
+ }
+
+ svg:active .girl{
+  opacity:1;
+  transition: 0.5s; 
+ /* Попытка запуска анимации при нажатии
+  /*  animation: showGirl 10s 1; /* Указываем название анимации, её время и количество повторов*/
+  /*animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+ }
+  .block_animation:active .I {
+      animation: scale 3s linear infinite alternate;
+  }
+  
+  .block_animation:active .A {
+      animation: scale 3s linear infinite alternate;
+  }
+  
+  
+  @keyframes scale {
+      0% { transform: scale(1); }
+      100% {  transform: scale(0.5); }
+  }
+  
+ 
+ @keyframes showGirl{
+0%  {
+  opacity:0;
+   }
+
+100% {
+  opacity:1;
+  }
+
+ }
+
+ /*Анимация при наведении на блок*/
+ svg:hover .I {
+     fill: #1d1d1b;
+     position: absolute;
+     display: inline-block;
+      offset-path: path('M0 0 L -40 50 , -70 15, -130 90z');
+      animation: bA 40s linear infinite; 
+      offset-rotate: -0deg;
+ }
+
+svg:hover .A {
+  fill: #1d1d1b;
+  position: absolute;
+  offset-path: path('M0 0 L 40 -50,70 -15,  130 -90z');
+ /* offset-path: path('M0 0 C 10 10, 50 90, 140 -120 ');*/
+offset-rotate: -0deg;
+  animation:bA 40s linear infinite; 
+}
+
+ @keyframes bA{
+  
+  100%{ 
+    offset-distance: 100%;
+  }
+}
+/*Уменьшение всего блока*/
+svg:active {
+  animation: scaleCont 10s linear;
+}
+
+@keyframes scaleCont {
+  0% { transform: scale(1); }
+  100% {  transform: scale(0.5); }
+}
+
+/*Элементы svg*/
+.cls-1
+{
+fill: #7d4e24;
+}
+.cls-10 
+{
+  fill: #7d4e24;
+}
+
+.cls-2 {
+  fill: #f5d0b5;
+}
+
+.cls-3 {
+  fill: #f5d0b5;
+}
+
+.cls-4 {
+  fill: #c69c6c;
+}
+
+.cls-5 {
+  fill: #9eb4c2;
+}
+
+.cls-6 {
+  fill: #fff;
+}
+
+.cls-7 {
+  fill: #c7c6c6;
+}
+
+.cls-8 {
+  fill: #4d4b60;
+}
+
+.cls-9 {
+  fill: #141416;
+}
+
+.cls-10 {
+  stroke: #7d4e24;
+  stroke-miterlimit: 10;
+}
+
+.cls-11 {
+  isolation: isolate;
+}
+
+.cls-12 {
+  fill: #1d1e1b;
+}
+
+/* ДЕВОЧКА */
+
+
+/*ЛОГОТИП*/
+.blockLOGO
+{
+  height: 40vh ;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+  
+}
+
+.logo11{
+/*margin:0 0 30px 0 ;
+padding: 50px;*/
+width: 200px;
+height: 200px;
+background-color: white;
+position: relative;
+
+}
+.table{
+    width: 40%;
+    height: 5%;
+    background-color: sienna;
+    position: absolute;
+    top:47%;
+    left:  29% ;
+
+}
+
+.upperPart{
+    width: 5%;
+    height: 16%;
+    border-radius: 50%;
+    background-color: sienna;
+    position: absolute;
+    top:49%;
+    left:  46%  ;
+}
+
+.bottomPart{
+    width: 0;
+    height: 12%;
+    border-left: 15px solid transparent ;
+    border-right: 15px solid transparent ;
+border-bottom: 30px solid sienna;
+position: absolute;
+    top:50%;
+    left:  41%  ;
+
+}
+
+.spala_stol{
+ width: 4%;
+ height: 4%;
+ border-radius: 50%;
+    background-color: rgb(67, 5, 5);
+    position: absolute;
+    top:47.5%;
+    left:  35%  ;
+
+
+}
+.pipka{
+    width: 5%;
+    height: 5%;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top:23.5%;
+    left:  45%  ;
+}
+
+.kryshka{
+    width: 12.5%;
+    height: 10%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 42% 38%, white 2% ,red 80%);
+    position: absolute;
+    top:25.5%;
+    left: 41.25%  ;
+}
+.puso{
+    width: 22.5%;
+    height: 17.5%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 40%, white ,red 80%);
+    position: absolute;
+    top:30%;
+    left:  36.5%  ;
+
+}
+.ruchka{
+    width: 7.5%;
+    height: 7.5%;
+    border-radius: 50%;
+    background-color: white;
+    border: 3px solid red;
+    position: absolute;
+    top:32.5%;
+    left:  54%  ;
+
+}
+.nosik{
+margin-left: 10%; 
+width: 3.5%; 
+height: 4.5%;
+transform: skew(55deg);
+background: #ff0000;
+position: absolute;
+    top:32.5%;;
+    left:  25.5%; ;
+
+}
+
+
+.spinka1{
+
+    width: 15%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: sienna;
+    position: absolute;
+    top:25%;
+    left:  3%  ;
+
+}
+
+.spinka2{
+    width: 15%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top:25%;
+    left:  0%  ;
+
+}
+.noga{
+    width: 3%;
+    height: 18.5%;
+    background-color: sienna;
+    position: absolute;
+    top:57.5%;
+    left:  27%  ;
+}
+
+.noga2{
+    width: 3%;
+    height: 18.5%;
+    background-color: sienna;
+    position: absolute;
+    top:57.5%;
+    right:  27%  ;
+}
+
+.sidushka{
+    width: 17.5%;
+    height: 4%;
+    background-color: sienna;
+    position: absolute;
+    top:57.5%;
+    left:  15%  ;
+}
+
+.sidushka2{
+    width: 17.5%;
+    height: 4%;
+    background-color: sienna;
+    position: absolute;
+    top:57.5%;
+    right:  15%  ;
+}
+.shpali1{
+    width: 3%;
+    height: 2.5%;
+    border-radius: 50%;
+    background-color: rgb(49, 23, 0);
+    position: absolute;
+    top:58.25%;
+    left:  16%  ;
+
+}
+.shpali2{
+    width: 3%;
+    height: 2.5%;
+    border-radius: 50%;
+    background-color: rgb(49, 23, 0);
+    position: absolute;
+    top:58.25%;
+    left:  21.5%  ;
+
+}
+.shpali3{
+    width: 3%;
+    height: 2.5%;
+    border-radius: 50%;
+    background-color: rgb(49, 23, 0);
+    position: absolute;
+    top:58.25%;
+    left:  27%  ;
+}
+.shpali4{
+    width: 3%;
+    height: 2.5%;
+    border-radius: 50%;
+    background-color: rgb(49, 23, 0);
+    position: absolute;
+    top:58.25%;
+    right:  16%  ;
+
+}
+.shpali5{
+    width: 3%;
+    height: 2.5%;
+    border-radius: 50%;
+    background-color: rgb(49, 23, 0);
+    position: absolute;
+    top:58.25%;
+    right:  21.5%  ;
+
+}
+.shpali6{
+    width: 3%;
+    height: 2.5%;
+    border-radius: 50%;
+    background-color: rgb(49, 23, 0);
+    position: absolute;
+    top:58.25%;
+    right:  27%  ;
+}
+
+.spinka3{
+
+    width: 15%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: sienna;
+    position: absolute;
+    top:25%;
+    right:  3%  ;
+
+}
+
+.spinka4{
+    width: 15%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top:25%;
+    right:  0%  ;
+
+}
+
+
+
+
+
+
+
+/*ЧАЙНИК*/
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
