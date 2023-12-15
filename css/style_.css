@@ -1,0 +1,157 @@
+/* Для анимации*/
+
+body > div {
+    width: 200px;
+    height: 200px;
+  
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+
+
+.block_animation{
+
+    width:200px;
+    height:800px;
+    background-color: rgb(255, 0, 0);
+    display: flex;
+    justify-content: right;
+    align-items:last baseline;
+    position:relative;
+     padding:150px;
+     margin-right: 0px;
+     padding-right: 0px;
+  }
+    
+/*Анимаия при нажатии*/
+   
+.girl{
+    opacity:0; /*Элемент полностью прозрачный (невидимый)*/
+    
+   }
+
+   svg:active .girl{
+    opacity:1;
+    transition: 0.5s; 
+   /* Попытка запуска анимации при нажатии
+    /*  animation: showGirl 10s 1; /* Указываем название анимации, её время и количество повторов*/
+    /*animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+   }
+    .block_animation:active .I {
+        animation: scale 3s linear infinite alternate;
+    }
+    
+    .block_animation:active .A {
+        animation: scale 3s linear infinite alternate;
+    }
+    
+    
+    @keyframes scale {
+        0% { transform: scale(1); }
+        100% {  transform: scale(0.5); }
+    }
+    
+   
+   @keyframes showGirl{
+ 0%  {
+    opacity:0;
+     }
+
+100% {
+    opacity:1;
+    }
+
+   }
+
+   /*Анимация при наведении на блок*/
+   svg:hover .I {
+       fill: #1d1d1b;
+       position: absolute;
+       display: inline-block;
+        offset-path: path('M0 0 L -40 50 , -70 15, -130 90z');
+        animation: bA 40s linear infinite; 
+        offset-rotate: -0deg;
+   }
+
+  svg:hover .A {
+    fill: #1d1d1b;
+    position: absolute;
+    offset-path: path('M0 0 L 40 -50,70 -15,  130 -90z');
+   /* offset-path: path('M0 0 C 10 10, 50 90, 140 -120 ');*/
+ offset-rotate: -0deg;
+    animation:bA 40s linear infinite; 
+  }
+ 
+   @keyframes bA{
+    
+    100%{ 
+      offset-distance: 100%;
+    }
+  }
+/*Уменьшение всего блока*/
+  svg:active {
+    animation: scaleCont 10s linear;
+  }
+
+  @keyframes scaleCont {
+    0% { transform: scale(1); }
+    100% {  transform: scale(0.5); }
+}
+
+/*Элементы svg*/
+.cls-1
+{
+ fill: #7d4e24;
+}
+.cls-10 
+{
+    fill: #7d4e24;
+}
+
+.cls-2 {
+    fill: #f5d0b5;
+}
+
+.cls-3 {
+    fill: #f5d0b5;
+}
+
+.cls-4 {
+    fill: #c69c6c;
+}
+
+.cls-5 {
+    fill: #9eb4c2;
+}
+
+.cls-6 {
+    fill: #fff;
+}
+
+.cls-7 {
+    fill: #c7c6c6;
+}
+
+.cls-8 {
+    fill: #4d4b60;
+}
+
+.cls-9 {
+    fill: #141416;
+}
+
+.cls-10 {
+    stroke: #7d4e24;
+    stroke-miterlimit: 10;
+}
+
+.cls-11 {
+    isolation: isolate;
+}
+
+.cls-12 {
+    fill: #1d1e1b;
+}
