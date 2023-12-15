@@ -73,7 +73,7 @@
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#contact">Контакты</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#girl">FlexBox</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#teapot">Рисунок CSS</a></li>
-                                
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#kab"> Каблуки</a></li>
                             </ul>
                         </div>
                     </div>
@@ -649,7 +649,51 @@
             </div>
         </div>  
 
-        
+        <!--========== КАБЛУК ==========-->
+      <div id="kab">
+        <div class ="block_animation" style="width: 100%;" >  
+           
+            <div class="col-sm-3 sm-margin-b-30">
+                            
+                <h2 class="margin-b-0">ЗАДАНИЕ КАБЛУК</h2>
+                <p>Даже всё работает!</p>
+                
+            
+        </div>
+        <div id="Go" style="display: none;"> <!--Изначально  не отображаются -->
+            <h2 class = "blackH">Расчет длины каблука</h2>
+            <label class="radio-label"><input type="radio" name="pol" value="boy"> Мужской</label>
+            <label class="radio-label"> <input type="radio" name="pol" value="girl"> Женский</label>
+            <br><br>
+            
+            <label for="footL">Длина стопы (см):</label>
+    
+            <input type  = "text" id="footL" name="footL">
+            <button class = "счет" onclick="calculateHeel()">Рассчитать</button>
+            <h3 id="result"></h3>
+           <img id="Image" class="Image">
+            </div> 
+    
+    
+    
+             <div id="Refusal" style="display: none;"> <!--Изначально  не отображаются -->
+                <h2 class = "blackH" > Ходите босиком</h2>
+            </div> 
+        </div>
+    </div>
+     <!--========== КАБЛУК ==========-->
+
+
+<!--========== ВИКТОРИНА ==========-->
+     <div class = "block_question"  >
+        <h2> Вопросы</h2>
+        <h33> Великий, могучий, свободный, правдивый русский язык!  (И.С. Тургенев)</h33>
+     </div>
+     <div id="questions"> </div>
+     </div>
+<!--========== ВИКТОРИНА ==========-->
+
+
         <!--========== FOOTER ==========-->
         <footer class="footer">
             <div class="content container">
